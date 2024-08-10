@@ -21,12 +21,14 @@ public class Bai1 {
             a = s.nextDouble();
             b = s.nextDouble();
             c = s.nextDouble();
-            if(a <= 0 || b <= 0 || c <= 0){
+            if(a + b >= c && a + c >= b && b + c >= a){
+                double p = (a + b + c)/2;
+                double dientich = Math.sqrt(p*(p - a) * (p - b) *(p - c));
+                System.out.printf("Dien tich hinh tam giac la:%.2f",dientich);
+            }
+            else{
                 System.out.println(-1);
             }
-            double p = (a + b + c)/2;
-            double dientich = Math.sqrt(p*(p - a) * (p - b) *(p - c));
-            System.out.printf("Dien tich hinh tam giac la:%.2f",dientich);
         } else if (type.equals(s3)) {
             double r;
             System.out.println("Nhap ban kinh hinh tron: ");
