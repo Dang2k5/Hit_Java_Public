@@ -21,6 +21,58 @@ public class Student {
         this.kthp = kthp;
     }
 
+    public String getTen() {
+        return ten;
+    }
+
+    public void setTen(String ten) {
+        this.ten = ten;
+    }
+
+    public String getDiaChi() {
+        return diaChi;
+    }
+
+    public void setDiaChi(String diaChi) {
+        this.diaChi = diaChi;
+    }
+
+    public int getNamSinh() {
+        return namSinh;
+    }
+
+    public void setNamSinh(int namSinh) {
+        this.namSinh = namSinh;
+    }
+
+    public void setSoTietNghi(int soTietNghi) {
+        this.soTietNghi = soTietNghi;
+    }
+
+    public double getTx1() {
+        return tx1;
+    }
+
+    public void setTx1(double tx1) {
+        this.tx1 = tx1;
+    }
+
+    public double getTx2() {
+        return tx2;
+    }
+
+    public void setTx2(double tx2) {
+        this.tx2 = tx2;
+    }
+
+    public double getKthp() {
+        return kthp;
+    }
+
+    public void setKthp(double kthp) {
+        this.kthp = kthp;
+    }
+
     public int getSoTietNghi() {
         return soTietNghi;
     }
@@ -31,6 +83,7 @@ public class Student {
     }
 
     public int tinhTuoi(){
+         int currentyears = java.time.Year.now();
         return LocalDate.now().getYear() - namSinh;
     }
 

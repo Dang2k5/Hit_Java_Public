@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class Main {
     public static ArrayList<Student> st = new ArrayList<Student>();
+
     public static Student s1 = new Student();
     static Scanner s = new Scanner(System.in);
     public static void fakeData(){
@@ -15,6 +16,7 @@ public class Main {
         st.add(s1);
         st.add(s2);
         st.add(s3);
+
     }
 
     public static void xuat(){
@@ -104,6 +106,19 @@ public class Main {
         }while(choose != 0);
     }
     public static void main(String[] args) {
+        Student students = new Student();
+        System.out.println(String.format("%-15s %-15s %-15s %-15s %-15s %-15s %-15s %-15s %-15s","Ma SV", "Ten", "Tuoi", "Dia chi", "Diem TX1", "Diem TX2", "Diem KTHP", "Diem GPA", "So tiet nghi"));
+        for(int i = 0; i < st.size(); i++){
+            Student student = students[i];
+            System.out.println(String.format("%-15s %-15s %-15d %-15s %-15.1f %-15.1f %-15.1f %-15.1f %15d",
+                    student.getTen(),
+                    student.tinhTuoi(),
+                    student.getDiaChi(),
+                    student.getTx1(),
+                    student.getTx2(),
+                    student.getKthp(),
+                    student.tinhGPA()));
+        }
         fakeData();
         xuat();
         menu();
